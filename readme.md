@@ -1,6 +1,6 @@
-Readme 
+## PRUEBAS E2E AL APLICATIVO GHOST, CON LA HERRAMIENTA DE PRUEBAS CYPRESS ##
 
-Para la ejecución de Ghost:
+### Para la ejecución de Ghost:
 
 	1) Instalar Ghost en su version 4.41.3 de manera local siguiendo los pasos del tutorial: https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html 
 	2) Ingresar al link con el que quedo instalada la aplicación GHOST
@@ -10,7 +10,7 @@ Para la ejecución de Ghost:
 	4) Para la ejecución de los escenarios con cada una de las herramientas planteadas es necesario que la aplicación sea desplegada desde 0
 	
 	
-Para instalar Kraken y ejecutar los escenarios de pruebas: 
+### Para instalar Kraken y ejecutar los escenarios de pruebas: 
 	 
 	1)npm install kraken-node -g
 	2)crear una carpeta donde va estar kraken (por ejemplo pruebas_kraken)
@@ -46,7 +46,7 @@ Para instalar Kraken y ejecutar los escenarios de pruebas:
 
 
 
-Funcionalidades: 
+### Funcionalidades: 
 
 	1) Crear un nuevo post(publicación)
 	
@@ -82,7 +82,7 @@ Funcionalidades:
 	Permite listar las Pages o Páginas creadas y filtrarlas.
 	Para acceder a esta funcionalidad es necesario estar autenticado en la aplicación, el ingreso está ubicado en la barra lateral izquierda, sección Pages.
 	
-Escenarios:
+### Escenarios:
 
 	1) Crear post y publicarlo.
 	
