@@ -17,6 +17,7 @@ Para instalar Kraken y ejecutar los escenarios de pruebas:
 	3)ingresar a la carpeta por la consola
 	4) clonar el repositorio https://github.com/ErikBernal94/KrakenTestingMiso (git clone 	https://github.com/ErikBernal94/KrakenTestingMiso.git)
 	5) ingresar a la carpeta cd KrakenTestingMiso
+	6) Validar que la URL de ghost coincida con el parametro <<GHOST-URL>> alijado en el archivo properties.json
 	6)Ejecutar kraken-node run
 	7)Si al correr el conmando kraken-node run aparece este error "Error: 
 		  You appear to be executing an install of cucumber (most likely a global install)
