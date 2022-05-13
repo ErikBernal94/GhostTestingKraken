@@ -9,11 +9,15 @@ Scenario: Como usuario creo una pagina, despues la edito y la marco para no publ
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -23,6 +27,10 @@ Scenario: Como usuario creo una pagina, despues la edito y la marco para no publ
 
   And I click on dashboard
 
+  And I take a screenshot
+
   And I click on see all activity
+
+  And I take a screenshot
 
   Then I review no member activity yet

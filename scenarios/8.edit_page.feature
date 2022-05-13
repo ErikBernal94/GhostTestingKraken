@@ -9,13 +9,17 @@ Scenario: Como usuario creo una pagina y despues la edito
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   And I click next
 
@@ -29,6 +33,8 @@ Scenario: Como usuario creo una pagina y despues la edito
 
   And I enter page content "<PAGECONTENT>"
 
+  And I take a screenshot
+
   And I publish post
 
   And I click publish button
@@ -39,9 +45,13 @@ Scenario: Como usuario creo una pagina y despues la edito
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click the page item of list "<PAGETITLE>"
 
   And I enter page title "<EDITEDPAGETITLE>"
+
+  And I take a screenshot
 
   And I enter page content "<EDITEDPAGECONTENT>"
 
@@ -54,3 +64,7 @@ Scenario: Como usuario creo una pagina y despues la edito
   And I click the go back page list
 
   And I wait for 2 seconds
+
+  And I take a screenshot
+
+  Then I review the item of list "<EDITEDPAGECONTENT>"

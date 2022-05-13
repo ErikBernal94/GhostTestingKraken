@@ -9,7 +9,9 @@ Scenario: Como usuario creo, modifico y despublico un post
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
@@ -17,15 +19,21 @@ Scenario: Como usuario creo, modifico y despublico un post
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click next
 
   And I wait for 7 seconds
 
   And I click on new post
+
+  And I take a screenshot
   
   And I enter post title "<POSTTITLE-MODIFIED-UNPUBLISHED>"
 
   And I enter post content "<POSTCONTENT>"
+
+  And I take a screenshot
 
   And I publish post
 
@@ -41,6 +49,8 @@ Scenario: Como usuario creo, modifico y despublico un post
 
   And I click on view site
 
+  And I take a screenshot
+
   And I review the post  published of viewsite "<POSTTITLE-MODIFIED-UNPUBLISHED>"
 
   And I click the go back post list
@@ -48,6 +58,8 @@ Scenario: Como usuario creo, modifico y despublico un post
   And I review the item of list posts "<POSTTITLE-MODIFIED-UNPUBLISHED>"
 
   And I enter post title "<POSTTITLE-MODIFIED-NEW-UNPUBLISHED>"
+
+  And I take a screenshot
 
   And I publish post
 
@@ -63,14 +75,20 @@ Scenario: Como usuario creo, modifico y despublico un post
 
   And I review the item of list posts "<POSTTITLE-MODIFIED-NEW-UNPUBLISHED>"  
 
+  And I take a screenshot
+
   And I click Update button
 
   And I click on unpublish
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
   And I click the go back post list
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   Then I review the page not published of list "<POSTTITLE-MODIFIED-NEW-UNPUBLISHED>"

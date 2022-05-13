@@ -9,11 +9,15 @@ Scenario: Como usuario creo un miembro
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -23,12 +27,18 @@ Scenario: Como usuario creo un miembro
 
   And I click the go Members
 
+  And I take a screenshot
+
   And I click button New member
 
   And I enter name member "<NAME-MEMBER-CREATE>"
 
   And I enter email member "<EMAIL-MEMBER-CREATE>"
 
+  And I take a screenshot
+
   And I click button Save member
+
+  And I take a screenshot
 
   Then I check the name member of list "<NAME-MEMBER-CREATE>"

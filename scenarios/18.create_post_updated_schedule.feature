@@ -9,11 +9,15 @@ Scenario: Como usuario creo el post y modifico el horario de publicacion
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -27,6 +31,8 @@ Scenario: Como usuario creo el post y modifico el horario de publicacion
 
   And I enter post content "<POSTCONTENT>"
 
+  And I take a screenshot
+
   And I publish post
 
   And I click publish button
@@ -37,9 +43,13 @@ Scenario: Como usuario creo el post y modifico el horario de publicacion
 
   And I click the go back post list
 
+  And I take a screenshot
+
   And I wait for 10 seconds
 
   And I click on view site
+
+  And I take a screenshot
 
   And I review the post  published of viewsite "<POSTTITLE-MODIFIED-OLD-SCHEDULE>"
 

@@ -8,7 +8,9 @@ Scenario: Creo una pagina pero no es publicada
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
@@ -16,11 +18,15 @@ Scenario: Creo una pagina pero no es publicada
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click next
 
   And I wait for 7 seconds
 
   And I click on Pages
+
+  And I take a screenshot
 
   And I click on New page
   
@@ -28,10 +34,14 @@ Scenario: Creo una pagina pero no es publicada
 
   And I enter page content "<PAGECONTENT>"
 
+  And I take a screenshot
+
   And I wait for 2 seconds
 
   And I click the go back page list
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   Then I review the page not published of list "<CREATEDPAGENOTPUBLISHEDTITLE>"

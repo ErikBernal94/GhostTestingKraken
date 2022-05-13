@@ -9,11 +9,15 @@ Scenario: Como usuario creo un post, lo marco como no publicado, filtro por no p
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -27,6 +31,8 @@ Scenario: Como usuario creo un post, lo marco como no publicado, filtro por no p
 
   And I enter post content "<POSTCONTENT>"
 
+  And I take a screenshot
+
   And I publish post
 
   And I click publish button
@@ -39,11 +45,15 @@ Scenario: Como usuario creo un post, lo marco como no publicado, filtro por no p
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click the post item of list "<FILTEREDPOSTNOTPUBLISHEDTITLE>"
 
   And I publish post
 
   And I click on unpublish
+
+  And I take a screenshot
 
   And I click publish button
 
@@ -51,10 +61,16 @@ Scenario: Como usuario creo un post, lo marco como no publicado, filtro por no p
 
   And I click the go back post list
 
+  And I take a screenshot
+
   And I wait for 2 seconds
 
   And I click filter post list
 
+  And I take a screenshot
+
   And I click filter draft posts
+
+  And I take a screenshot
 
   Then I review the item of list "<FILTEREDPOSTNOTPUBLISHEDTITLE>"

@@ -9,13 +9,17 @@ Scenario: Como usuario programo un post para publicar
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   And I click next
 
@@ -27,17 +31,23 @@ Scenario: Como usuario programo un post para publicar
 
   And I enter post content "<POSTCONTENT>"
 
+  And I take a screenshot
+
   And I publish post
 
   And I click on schedule radio button
 
   And I set time on schedule button confirm
 
+  And I take a screenshot
+
   And I click confirm publish button
 
   And I click the go back post list
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   Then I review the post not published of list, be schedule "<POSTTITLE-SCHEDULE>"
   

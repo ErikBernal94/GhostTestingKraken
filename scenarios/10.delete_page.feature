@@ -9,11 +9,15 @@ Scenario: Como usuario creo una pagina y despues la elimino
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -29,6 +33,8 @@ Scenario: Como usuario creo una pagina y despues la elimino
 
   And I enter page content "<DELETEDPAGECONTENT>"
 
+  And I take a screenshot
+
   And I publish post
 
   And I click publish button
@@ -39,6 +45,8 @@ Scenario: Como usuario creo una pagina y despues la elimino
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click the page item of list "<DELETEDPAGETITLE>"
 
   And I click the toggle button
@@ -48,6 +56,8 @@ Scenario: Como usuario creo una pagina y despues la elimino
   And I click on delete confirmation
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   Then I review the page were deleted of list "<DELETEDPAGETITLE>"
 

@@ -9,11 +9,15 @@ Scenario: Como usuario creo y elimino un post
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -26,6 +30,8 @@ Scenario: Como usuario creo y elimino un post
   And I enter post title "<POSTTITLE-MODIFIED-OLD-DELETE>"
 
   And I enter post content "<POSTCONTENT>"
+
+  And I take a screenshot
 
   And I publish post
 
@@ -41,6 +47,8 @@ Scenario: Como usuario creo y elimino un post
 
   And I click on view site
 
+  And I take a screenshot
+
   And I review the post  published of viewsite "<POSTTITLE-MODIFIED-OLD-DELETE>"
 
   And I click the go back post list
@@ -49,7 +57,11 @@ Scenario: Como usuario creo y elimino un post
 
   And I enter post title "<POSTTITLE-MODIFIED-NEW-DELETE>"
 
+  And I take a screenshot
+
   And I publish post
+
+  And I take a screenshot
 
   And I click publish button
 
@@ -61,6 +73,8 @@ Scenario: Como usuario creo y elimino un post
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And  I review the item of list posts "<POSTTITLE-MODIFIED-NEW-DELETE>"
 
   And I click the toggle button
@@ -70,6 +84,8 @@ Scenario: Como usuario creo y elimino un post
   And I click on delete confirmation
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   Then I review the page were deleted of list "<POSTTITLE-MODIFIED-NEW-DELETE>"
 

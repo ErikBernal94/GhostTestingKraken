@@ -1,5 +1,33 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
+const { Given, When, Then, Before } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
+const fs = require('fs');
+const path = require('path');
+let screenshotCount = 1;
+let featureName = '';
+let dir = '';
+
+Before((scenario)=>{
+    featureName = scenario.gherkinDocument.feature.name.replace(/ /g,"_");
+    dir = './capturas/'+featureName;
+    if(!fs.existsSync(dir)){
+        fs.mkdirSync(dir, {recursive:true});
+    }
+    else{
+        fs.readdir(dir, (err, files)=>{
+            if(err) throw err;
+            for(const file of files){
+                fs.unlink(path.join(dir,file), err => {
+                    if(err) throw err;
+                });
+            }
+        })
+    }
+});
+
+When('I take a screenshot', async function () {
+    await this.driver.saveScreenshot(dir+'/screenshot'+screenshotCount+'.png');
+    screenshotCount++;
+});
 
 When('I enter email {kraken-string}', async function (email) {
     let element = await this.driver.$('.email');

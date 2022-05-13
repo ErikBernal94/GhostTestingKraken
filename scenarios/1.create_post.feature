@@ -9,15 +9,21 @@ Scenario: Como usuario creo un post
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
 
+  And I take a screenshot
+
   And I wait for 2 seconds
 
   And I click next
+
+  And I take a screenshot
 
   And I wait for 7 seconds
 
@@ -26,8 +32,12 @@ Scenario: Como usuario creo un post
   And I enter post title "<POSTTITLE>"
 
   And I enter post content "<POSTCONTENT>"
+  
+  And I take a screenshot
 
   And I publish post
+
+  And I take a screenshot
 
   And I click publish button
 
@@ -38,5 +48,7 @@ Scenario: Como usuario creo un post
   And I click the go back post list
 
   And I wait for 2 seconds
+
+  And I take a screenshot
 
   Then I review the item of list "<POSTTITLE>"

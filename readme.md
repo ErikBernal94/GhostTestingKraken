@@ -54,7 +54,7 @@ A continuación, describimos los pasos para ejecutar los escenarios ajustados de
  Nota: Si tiene una version de ghost diferente instalada debe desintalarla, puede usar el comando ghost uninstall dentro de la carpeta donde tiene
  instaldo Ghost y desea removerlo. (Más info https://ghost.org/docs/ghost-cli/)
 	
-	1) Instalar Ghost en su version 3.42.0 de manera local siguiendo los pasos del tutorial: https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html (Para una version especifica peude usar : "ghost install 4.41.3 --local" )
+	1) Instalar Ghost en su version 3.42.0 de manera local siguiendo los pasos del tutorial: https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html (Para una version especifica peude usar : "ghost install 3.42.0 --local" )
 	2) Ingresar al link con el que quedo instalada la aplicación GHOST
 	3) Crear un sitio nuevo con nombre MISO-Pruebas, usando las credenciales:
 		Usuario:  usuario@ghost.com

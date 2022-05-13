@@ -9,11 +9,15 @@ Scenario: Como usuario creo un post, filtro por publicado y valido que esté en 
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -27,6 +31,8 @@ Scenario: Como usuario creo un post, filtro por publicado y valido que esté en 
 
   And I enter post content "<POSTCONTENT>"
 
+  And I take a screenshot
+
   And I publish post
 
   And I click publish button
@@ -37,10 +43,16 @@ Scenario: Como usuario creo un post, filtro por publicado y valido que esté en 
 
   And I click the go back post list
 
+  And I take a screenshot
+
   And I wait for 2 seconds
 
   And I click filter post list
 
+  And I take a screenshot
+
   And I click filter published post
+
+  And I take a screenshot
 
   Then I review the item of list "<FILTEREDPOSTTITLE>"

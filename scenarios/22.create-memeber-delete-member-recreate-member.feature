@@ -9,11 +9,15 @@ Scenario: Como usuario creo, modifico y elimino un miembro
 
   And I wait for 5 seconds
 
-  When I enter email "<USERNAME1>"
+  When I take a screenshot
+
+  And I enter email "<USERNAME1>"
 
   And I wait for 2 seconds
 
   And I enter password "<PASSWORD1>"
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -23,17 +27,25 @@ Scenario: Como usuario creo, modifico y elimino un miembro
 
   And I click the go Members
 
+  And I take a screenshot
+
   And I click button New member
 
   And I enter name member "<NAME-MEMBER-CREATE-UPDATE-DELETE>"
 
   And I enter email member "<EMAIL-MEMBER-CREATE-ERROR-UPDATE-DELETE>"
 
+  And I take a screenshot
+
   And I click button Save member
+
+  And I take a screenshot
 
   And I see error email
 
   And I enter email member "<EMAIL-MEMBER-CREATE-UPDATE-DELETE>"
+
+  And I take a screenshot
 
   And I click button Retry member
 
@@ -45,21 +57,31 @@ Scenario: Como usuario creo, modifico y elimino un miembro
 
   And I enter name member "<NAME-MEMBER-UPDATE-DELETE>"
 
+  And I take a screenshot
+
   And I click button Save member
 
   And I click the go Members
+
+  And I take a screenshot
 
   And I click the name member of list "<NAME-MEMBER-UPDATE-DELETE>"
 
   And I click button tools
 
+  And I take a screenshot
+
   And I click button delete confirm
 
   And I click button delete confirm
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
   And I click the go Members
+
+  And I take a screenshot
 
   Then I check the name member of list doesnt appears "<NAME-MEMBER-UPDATE-DELETE>"
   
