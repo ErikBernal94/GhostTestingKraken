@@ -1,4 +1,4 @@
-## PRUEBAS E2E AL APLICATIVO GHOST, CON LA HERRAMIENTA DE PRUEBAS CYPRESS ##
+## PRUEBAS E2E AL APLICATIVO GHOST, CON LA HERRAMIENTA DE PRUEBAS KRAKEN VERSION 4.41.3 ##
 
 ### Para la ejecución de Ghost:
 
@@ -40,6 +40,61 @@
 			-Repetir los pasos anteriores para cada uno de los archivos alojados en la carpeta <<Scenarios>>
 		Para Mac:
 			- Los escenarios pueden ser ejecutados al mismo tiempo, para ello se mueven todos los archivos alojados en la carpeta <<Scenarios>> 
+			a la carpeta <<features>>  
+			- En la carpeta raiz ejecutar el comando <<./node_modules/kraken-node/bin/kraken-node run>>
+
+
+## PRUEBAS E2E AL APLICATIVO GHOST, CON LA HERRAMIENTA DE PRUEBAS KRAKEN VERSION 3.42.0 ##
+
+Para realizar las pruebas VRT (Visual Regression Testing), se debe geenerar los screenshots para la version anterior, 3.42.0 de ghost.
+Para esto, es necesario instalar ghost en esta version especifica y ejecutar los escenarios de pruebas ajustados para el cambio de version.
+A continuación, describimos los pasos para ejecutar los escenarios ajustados dentro de este repositorio.
+
+### Para la ejecución de Ghost:
+ Nota: Si tiene una version de ghost diferente instalada debe desintalarla, puede usar el comando ghost uninstall dentro de la carpeta donde tiene
+ instaldo Ghost y desea removerlo. (Más info https://ghost.org/docs/ghost-cli/)
+	
+	1) Instalar Ghost en su version 3.42.0 de manera local siguiendo los pasos del tutorial: https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html (Para una version especifica peude usar : "ghost install 4.41.3 --local" )
+	2) Ingresar al link con el que quedo instalada la aplicación GHOST
+	3) Crear un sitio nuevo con nombre MISO-Pruebas, usando las credenciales:
+		Usuario:  usuario@ghost.com
+		Contraseña: Usuario1234567
+	4) Para la ejecución de los escenarios con cada una de las herramientas planteadas es necesario que la aplicación sea desplegada desde 0
+	
+	
+### Para instalar Kraken y ejecutar los escenarios de pruebas: 
+	Nota: Si ya tiene este repositorio local puede omitir los siguientes pasos y comenzar en el paso 8.
+
+	1)npm install kraken-node -g
+	2)crear una carpeta donde va estar kraken (por ejemplo pruebas_kraken)
+	3)ingresar a la carpeta por la consola
+	4) clonar el repositorio https://github.com/ErikBernal94/KrakenTestingMiso (git clone 	https://github.com/ErikBernal94/KrakenTestingMiso.git)
+	5) ingresar a la carpeta cd KrakenTestingMiso
+	6) Validar que la URL de ghost coincida con el parametro <<GHOST-URL>> alijado en el archivo properties.json
+	6)Ejecutar kraken-node run
+	7)Si al correr el conmando kraken-node run aparece este error "Error: 
+		  You appear to be executing an install of cucumber (most likely a global install)
+		  that is different from your local install (the one required in your support files).
+		  For cucumber to work, you need to execute the same install that is required in your support files.
+		  Please execute the locally installed version to run your tests."
+
+		  dentro del directorio donde se corre el comando kraken-node gen
+		  ejecutar npm init (aqui pregunta sobre varias opciones de configuracion , en mi caso le di enter a todo),
+		  luego npm install kraken-node y por ultimo npm install 
+		nota : se debe tener instalado ADB (Mac: https://stackoverflow.com/questions/31374085/installing-adb-on-macos, Windows: https://www.youtube.com/watch?v=tYY7FTV31vM&ab_channel=IrsealH%26S)
+
+	7) copiar la URL donde se esta ejecutando ghost, el archivo properties.json del repositorio en la carpeta KrakenTestingMiso, "GHOST-URL" = "URL DE GHOST"
+	8)Ejecutar Kraken,
+        - Mover el archivo <<step.js>>  ubicado en "features/web/step_definitions/step.js" a "/scenarios".
+        - Ingresar a la carpeta <<scenarios-version-3-42>>, mover el archivo step.js ubicado en esa carpeta a "/scenarios".
+		para windows:
+			- Los escenarios de pruebas se ejecutan uno a uno, por esto es necesario ir moviendo, de a un archivo, los archivos alojados en la carpeta <<scenarios-version-3-42>> 
+			a la carpeta <<features>>, 
+			- Ejecutar la prueba con el comando <<npx kraken-node run>> 
+			- Devolver el archivo probado a la carpeta <<scenarios-version-3-42>>
+			-Repetir los pasos anteriores para cada uno de los archivos alojados en la carpeta <<Scenarios>>
+		Para Mac:
+			- Los escenarios pueden ser ejecutados al mismo tiempo, para ello se mueven todos los archivos alojados en la carpeta <<scenarios-version-3-42>>
 			a la carpeta <<features>>  
 			- En la carpeta raiz ejecutar el comando <<./node_modules/kraken-node/bin/kraken-node run>>
 
