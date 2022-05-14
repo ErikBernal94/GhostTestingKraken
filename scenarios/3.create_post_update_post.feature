@@ -25,15 +25,23 @@ Scenario: Como usuario creo y modifico un post
 
   And I wait for 7 seconds
 
+  And I take a screenshot
+
   And I click on new post
+
+  And I take a screenshot
   
   And I enter post title "<POSTTITLE-MODIFIED-OLD>"
+
+  And I take a screenshot
 
   And I enter post content "<POSTCONTENT>"
 
   And I take a screenshot
 
   And I publish post
+
+  And I take a screenshot
 
   And I click publish button
 
@@ -48,6 +56,8 @@ Scenario: Como usuario creo y modifico un post
   And I wait for 2 seconds
 
   And I click on view site
+
+  And I take a screenshot
 
   And I review the post  published of viewsite "<POSTTITLE-MODIFIED-OLD>"
 

@@ -41,11 +41,15 @@ Scenario: Como usuario creo un post
 
   And I click publish button
 
+  And I take a screenshot
+
   And I click confirm publish button
 
   And I wait for 2 seconds
 
   And I click the go back post list
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
