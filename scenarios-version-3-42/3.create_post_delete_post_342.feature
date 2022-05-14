@@ -25,7 +25,11 @@ Scenario: Como usuario creo y elimino un post
 
   And I wait for 7 seconds
 
+  And I take a screenshot
+
   And I click on new post
+
+  And I take a screenshot
   
   And I enter post title "<POSTTITLE-MODIFIED-OLD-DELETE>"
 
@@ -35,6 +39,8 @@ Scenario: Como usuario creo y elimino un post
 
   And I publish post
 
+  And I take a screenshot
+
   And I click publish button
 
   And I wait for 2 seconds
@@ -43,6 +49,8 @@ Scenario: Como usuario creo y elimino un post
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click on view site
 
   And I take a screenshot
@@ -50,6 +58,8 @@ Scenario: Como usuario creo y elimino un post
   And I review the post  published of viewsite "<POSTTITLE-MODIFIED-OLD-DELETE>"
 
   And I click the go back post list
+
+  And I take a screenshot
 
   And I review the item of list posts "<POSTTITLE-MODIFIED-OLD-DELETE>"
 
@@ -65,6 +75,8 @@ Scenario: Como usuario creo y elimino un post
 
   And I wait for 2 seconds
 
+  And I take a screenshot
+
   And I click the go back post list
 
   And I wait for 2 seconds
@@ -73,7 +85,11 @@ Scenario: Como usuario creo y elimino un post
 
   And  I review the item of list posts "<POSTTITLE-MODIFIED-NEW-DELETE>"
 
+  And I take a screenshot
+
   And I click the toggle button
+
+  And I take a screenshot
 
   And I click on delete post button
 

@@ -23,13 +23,19 @@ Scenario: Como usuario creo una pagina y despues la elimino
 
   And I click next
 
+  And I take a screenshot
+
   And I wait for 7 seconds
 
   And I click on Pages
 
+  And I take a screenshot
+
   And I click on New page
   
   And I enter page title "<DELETEDPAGETITLE>"
+  
+  And I take a screenshot
 
   And I enter page content "<DELETEDPAGECONTENT>"
 
@@ -37,7 +43,11 @@ Scenario: Como usuario creo una pagina y despues la elimino
 
   And I publish post
 
+  And I take a screenshot
+
   And I click publish button
+
+  And I take a screenshot
 
   And I wait for 2 seconds
 
@@ -49,13 +59,19 @@ Scenario: Como usuario creo una pagina y despues la elimino
 
   And I click the page item of list "<DELETEDPAGETITLE>"
 
+  And I take a screenshot
+
   And I click the toggle button  
+
+  And I take a screenshot
 
   And I click on delete button
 
+  And I take a screenshot
+
   And I click on delete confirmation
 
-  And I wait for 2 seconds
+  And I wait for 4 seconds
 
   And I take a screenshot
 

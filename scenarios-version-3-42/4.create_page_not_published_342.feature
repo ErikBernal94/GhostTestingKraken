@@ -24,13 +24,19 @@ Scenario: Creo una pagina pero no es publicada
 
   And I wait for 7 seconds
 
+  And I take a screenshot
+
   And I click on Pages
 
   And I take a screenshot
 
   And I click on New page
+
+  And I take a screenshot
   
   And I enter page title "<CREATEDPAGENOTPUBLISHEDTITLE>"
+
+  And I take a screenshot
 
   And I enter page content "<PAGECONTENT>"
 
