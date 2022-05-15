@@ -486,5 +486,6 @@ Las pruebas de regresión consisten en mirar hacia el pasado y comparar el estad
 Para ver los resultados de las pruebas VRT de las dos versiones, es necesario abrir en el naveagador el index.html ubicado en la raiz del repositorio. Alli encontrará
 los 5 escenarios probados en Kraken, con cada screenshot en los pasos, dentro de cada screenshot se veran los resultados arrojados por Resemble, con el detalle de los resultados.
 
+Para ver el repo de Resemble, puede ingresar a este link https://github.com/ErikBernal94/ResembleGhost.
 URL: https://erikbernal94.github.io/GhostTestingKraken/
 
