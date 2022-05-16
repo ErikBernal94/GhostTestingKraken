@@ -487,5 +487,13 @@ Para ver los resultados de las pruebas VRT de las dos versiones, es necesario ab
 los 5 escenarios probados en Kraken, con cada screenshot en los pasos, dentro de cada screenshot se veran los resultados arrojados por Resemble, con el detalle de los resultados.
 
 Para ver el repo de Resemble, puede ingresar a este link https://github.com/ErikBernal94/ResembleGhost.
+
+Los pasos que se deeben realizar para realizar las pruebas VRT son 
+
+1. En la carpeta result, crear las dos carpetas en donde se van a alojar las imagenes a comparar, estas carpetas deben estar nombradas <<capturas_v3>> y <<capturas_v3>>
+2. Las imagenes deben estar organizadas en carpetas con nombres iguales, y los nombres de los archivos a comparar también deben ser los mismos
+3. Sobre la carpeta raiz del proyecto ejecutar el comando <<node index.js>>
+4. Los reportes será generados en la carpeta raiz y estaran organizados por escenario y nombre de archivo.
+
 URL: https://erikbernal94.github.io/GhostTestingKraken/
 
